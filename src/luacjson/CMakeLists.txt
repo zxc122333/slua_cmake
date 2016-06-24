@@ -1,0 +1,13 @@
+SET(SOURCE_FILES
+  lua_cjson.c strbuf.c fpconv.c
+)
+
+INCLUDE_DIRECTORIES(
+  .
+  ../lua
+)
+
+ADD_LIBRARY(luacjson_static STATIC ${SOURCE_FILES})
+
+SET_TARGET_PROPERTIES(luacjson_static PROPERTIES OUTPUT_NAME "luacjson")
+SET_TARGET_PROPERTIES(luacjson_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
